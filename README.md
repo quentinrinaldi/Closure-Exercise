@@ -1,5 +1,4 @@
 # Exercice : Injection de dépendances et conteneur de services
-​
 ## Présentation
 ​
 Nous voulons mettre en un système de gestion des classes de l'application qui nous permette d'accéder aux objets dont nous avons besoin sans avoir à les instancier explicitement. Ce mécanisme est souvent appelé **conteneur de services**.
@@ -13,7 +12,6 @@ Dans le cas général, un service est un singleton, c'est-à-dire que l'accès �
 Un exemple simple de conteneur est la [bibliothèque Pimple](https://pimple.symfony.com/), un projet de Symfony. Cependant, [Pimple](https://github.com/silexphp/Pimple) ne s'occupe pas de l'injection des dépendances.
 
 ## Enoncé
-​
 ### Le conteneur
 ​
 Nous voulons créer une classe `Container` qui gérera les services. Le dictionnaire des services sera une proopriété de cette classes, sus forme de tableau ou d'une structure similaire. Eventuellement, la classe `Container` pourra implémenter l'interface `ArrayAccess` permettant d'utiliser l'objet comme un itérateur.
@@ -30,7 +28,7 @@ La méthode `factory` permet de déclarer des services pour lesquelles chaque ap
 ​
 #### `get`
 ​
-La méthode `get` pertmet d'accéder au service et de récupérer une instance de la classe complètement “configurée”, c'est-à-dire pourvude toutes ses dépendances.
+La méthode `get` pertmet d'accéder au service et de récupérer une instance de la classe complètement “configurée”, c'est-à-dire pourvu de toutes ses dépendances.
 ​
 ​
 ### Utilisation
